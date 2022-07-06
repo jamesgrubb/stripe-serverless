@@ -35,3 +35,19 @@ main {
 	max-width: 80ch;
 	width: 90vw;
 }
+
+.products {
+	margin-block: 4rem;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+}
+
+.product {
+	border: 1px solid #efefef;
+	padding: 0.8rem;
+}
+
+.product > * + * {
+	margin-block-start: 1.8rem;
+}

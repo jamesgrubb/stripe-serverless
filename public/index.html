@@ -13,6 +13,31 @@
 		</header>
 		<main>
 			<h1>Buy our products</h1>
+			<div class="products"></div>
 		</main>
+		<template id="product">
+			<div class="product">
+				<h2>name</h2>
+				<p class="description">description</p>
+				<p class="price"></p>
+				<form action="" method="POST">
+					<label for="quantity">Quantity</label>
+					<input
+						type="number"
+						id="quantiry"
+						name="quantity"
+						value="1"
+						min="1"
+						max="10"
+					/>
+					<input type="hidden" name="sku" value="" />
+					<button>buy now</button>
+				</form>
+			</div>
+		</template>
+		<script type="module">
+			import { loadProducts } from './js/load-products.js';
+			loadProducts();
+		</script>
 	</body>
 </html>
