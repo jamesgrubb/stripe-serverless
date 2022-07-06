@@ -1,4 +1,3 @@
-// import { handlePaymentFormSubmit } from './handle-payment-form-submit.js';
 const stripe = Stripe(
 	'pk_test_51LDybtAMaZvK8tfum3J4bMvKVLqQxvCt2O65l2ZwoztFUHOgsnwJZylB8BS68FnEuHQvaF71bwmeeDRpEMM32dBq00DUN0m0Ab'
 );
@@ -14,10 +13,6 @@ export const handleFormSubmit = async (event) => {
 	};
 
 	console.log(data);
-
-	document
-		.querySelector('#payment-form')
-		.addEventListener('submit', handlePaymentFormSubmit(event, ''));
 
 	let elements;
 
