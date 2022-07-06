@@ -11,7 +11,7 @@ const createProductFromTemplate = (item) => {
 		currency: item.currency,
 	}).format((item.unit_amount / 100).toFixed(2));
 
-	const form = product.querySelector('form');
+	const form = product.querySelector('#form');
 	form.addEventListener('submit', handleFormSubmit);
 
 	return product;
