@@ -1,14 +1,18 @@
+import { handleFormSubmit } from './stripe-purchase.js';
 const createProductFromTemplate = (item) => {
 	const template = document.querySelector('#product');
 	const product = template.content.cloneNode(true);
 
 	product.querySelector('h2').innerText = item.product.name;
 	product.querySelector('.description').innerText = item.product.description;
-	product.querySelector('[name=sku]').innerText = item.id;
+	product.querySelector('[name=sku]').value = item.id;
 	product.querySelector('.price').innerText = new Intl.NumberFormat('en-GB', {
 		style: 'currency',
 		currency: item.currency,
 	}).format((item.unit_amount / 100).toFixed(2));
+
+	const form = product.querySelector('form');
+	form.addEventListener('submit', handleFormSubmit);
 
 	return product;
 };
