@@ -1,0 +1,4 @@
+[build]
+    cd "./functions/data" npm i && cd .
+    publish = "public"
+    functions = "functions"
