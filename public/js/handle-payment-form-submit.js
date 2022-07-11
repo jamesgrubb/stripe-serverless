@@ -4,9 +4,4 @@ export const handlePaymentFormSubmit = async () => {
 		console.log(event);
 	};
 	// console.log(event);
-	document
-		.querySelector('#payment-form')
-		.addEventListener('submit', (event) => {
-			console.log(e);
-		});
 };

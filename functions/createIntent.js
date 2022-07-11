@@ -7,9 +7,9 @@ const getPrices = async () => {
 	return response.data.filter((price) => price.active);
 };
 exports.handler = async () => {
-	const prices = await stripe.prices.list({
-		expand: ['data.product'],
-	});
+	// const prices = await stripe.prices.list({
+	// 	expand: ['data.product'],
+	// });
 	return {
 		statusCode: 200,
 		body: JSON.stringify(await getPrices()),
